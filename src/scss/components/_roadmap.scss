@@ -1,0 +1,43 @@
+.in-roadmap {
+    hr {
+        margin-bottom: 0;
+    }
+    .uk-card-default {
+        border: 2px solid $base-hr-border;
+        border-radius: $border-rounded-border-radius + 2px;
+        box-shadow: none;
+    }
+    .uk-card-body {
+        font-size: 14px;
+    }
+    .uk-label {
+        position: relative;
+        top: 2px;
+        left: 10px;
+    }
+}
+
+.in-roadmap-branch {
+    .in-icon-wrapper {
+        font-weight: $base-heading-font-weight;
+        position: relative;
+        top: 21px;
+        left: 38px;
+    }
+    .in-roadmap-title {
+        height: 105px;
+        border-left: 2px solid $base-hr-border;
+        margin-left: 5px;
+        padding-left: 40px;
+        .uk-label {
+            margin-top: -4px;
+        }
+    }
+}
+
+/* raodmap mediaquery */ 
+@media (max-width: 960px) {
+    .in-roadmap > .uk-child-width-1-1 > div {
+        margin-top: 0;
+    }
+}

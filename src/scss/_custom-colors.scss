@@ -1,0 +1,113 @@
+// Theme color variables
+// ========================================================================
+$in-color-one:                          #4184dd !default;
+$in-color-two:                          #012c6d !default;
+$in-color-three:                        #bababa !default;
+
+$in-color-white:                        #fff !default;
+$in-color-black:                        #000 !default;
+$in-color-light:                        #d5d7dd !default;
+$in-color-grey:                         #5c6370 !default;
+$in-color-dark:                         #2e3138 !default;
+$in-color-error:                        #f0506e !default;
+$in-color-warning:                      #faa05a !default;
+$in-color-success:                      #32d296 !default;
+$in-color-info:                         #1e87f0 !default;
+
+
+// Shades color variables
+// ========================================================================
+$in-color-one100:                         lighten($in-color-one, 39%) !default;
+$in-color-one200:                         lighten($in-color-one, 34%) !default;
+$in-color-one300:                         lighten($in-color-one, 26%) !default;
+$in-color-one400:                         lighten($in-color-one, 2%) !default;
+$in-color-one500:                         darken($in-color-one, 0%) !default;
+$in-color-one600:                         darken($in-color-one, 10%) !default;
+$in-color-one700:                         darken($in-color-one, 20%) !default;
+$in-color-one800:                         darken($in-color-one, 30%) !default;
+
+$in-color-two100:                         lighten($in-color-two, 39%) !default;
+$in-color-two200:                         lighten($in-color-two, 34%) !default;
+$in-color-two300:                         lighten($in-color-two, 26%) !default;
+$in-color-two400:                         lighten($in-color-two, 14%) !default;
+$in-color-two500:                         darken($in-color-two, 0%) !default;
+$in-color-two600:                         darken($in-color-two, 10%) !default;
+$in-color-two700:                         darken($in-color-two, 20%) !default;
+$in-color-two800:                         darken($in-color-two, 30%) !default;
+
+$in-color-three100:                       lighten($in-color-three, 23%) !default;
+$in-color-three200:                       lighten($in-color-three, 18%) !default;
+$in-color-three300:                       lighten($in-color-three, 12%) !default;
+$in-color-three400:                       lighten($in-color-three, 6%) !default;
+$in-color-three500:                       darken($in-color-three, 0%) !default;
+$in-color-three600:                       darken($in-color-three, 10%) !default;
+$in-color-three700:                       darken($in-color-three, 20%) !default;
+$in-color-three800:                       darken($in-color-three, 30%) !default;
+
+$in-color-black100:                       lighten($in-color-black, 60%) !default;
+$in-color-black200:                       lighten($in-color-black, 50%) !default;
+$in-color-black300:                       lighten($in-color-black, 40%) !default;
+$in-color-black400:                       lighten($in-color-black, 30%) !default;
+
+$in-color-light100:                       lighten($in-color-light, 13%) !default;
+$in-color-light200:                       lighten($in-color-light, 10%) !default;
+$in-color-light300:                       lighten($in-color-light, 8%) !default;
+$in-color-light400:                       lighten($in-color-light, 4%) !default;
+$in-color-light500:                       darken($in-color-light, 0%) !default;
+$in-color-light600:                       darken($in-color-light, 5%) !default;
+$in-color-light700:                       darken($in-color-light, 10%) !default;
+$in-color-light800:                       darken($in-color-light, 15%) !default;
+
+$in-color-grey100:                        lighten($in-color-grey, 25%) !default;
+$in-color-grey200:                        lighten($in-color-grey, 20%) !default;
+$in-color-grey300:                        lighten($in-color-grey, 15%) !default;
+$in-color-grey400:                        lighten($in-color-grey, 10%) !default;
+$in-color-grey500:                        darken($in-color-grey, 0%) !default;
+$in-color-grey600:                        darken($in-color-grey, 5%) !default;
+$in-color-grey700:                        darken($in-color-grey, 10%) !default;
+$in-color-grey800:                        darken($in-color-grey, 15%) !default;
+
+$in-color-dark100:                        lighten($in-color-dark, 25%) !default;
+$in-color-dark200:                        lighten($in-color-dark, 20%) !default;
+$in-color-dark300:                        lighten($in-color-dark, 15%) !default;
+$in-color-dark400:                        lighten($in-color-dark, 10%) !default;
+$in-color-dark500:                        darken($in-color-dark, 0%) !default;
+$in-color-dark600:                        darken($in-color-dark, 5%) !default;
+$in-color-dark700:                        darken($in-color-dark, 10%) !default;
+$in-color-dark800:                        darken($in-color-dark, 15%) !default;
+
+$in-color-error100:                       lighten($in-color-error, 39%) !default;
+$in-color-error200:                       lighten($in-color-error, 34%) !default;
+$in-color-error300:                       lighten($in-color-error, 26%) !default;
+$in-color-error400:                       lighten($in-color-error, 14%) !default;
+$in-color-error500:                       darken($in-color-error, 0%) !default;
+$in-color-error600:                       darken($in-color-error, 10%) !default;
+$in-color-error700:                       darken($in-color-error, 20%) !default;
+$in-color-error800:                       darken($in-color-error, 30%) !default;
+
+$in-color-warning100:                     lighten($in-color-warning, 39%) !default;
+$in-color-warning200:                     lighten($in-color-warning, 34%) !default;
+$in-color-warning300:                     lighten($in-color-warning, 26%) !default;
+$in-color-warning400:                     lighten($in-color-warning, 14%) !default;
+$in-color-warning500:                     darken($in-color-warning, 0%) !default;
+$in-color-warning600:                     darken($in-color-warning, 10%) !default;
+$in-color-warning700:                     darken($in-color-warning, 20%) !default;
+$in-color-warning800:                     darken($in-color-warning, 30%) !default;
+
+$in-color-success100:                     lighten($in-color-success, 39%) !default;
+$in-color-success200:                     lighten($in-color-success, 34%) !default;
+$in-color-success300:                     lighten($in-color-success, 26%) !default;
+$in-color-success400:                     lighten($in-color-success, 14%) !default;
+$in-color-success500:                     darken($in-color-success, 0%) !default;
+$in-color-success600:                     darken($in-color-success, 10%) !default;
+$in-color-success700:                     darken($in-color-success, 20%) !default;
+$in-color-success800:                     darken($in-color-success, 30%) !default;
+
+$in-color-info100:                        lighten($in-color-info, 39%) !default;
+$in-color-info200:                        lighten($in-color-info, 34%) !default;
+$in-color-info300:                        lighten($in-color-info, 26%) !default;
+$in-color-info400:                        lighten($in-color-info, 14%) !default;
+$in-color-info500:                        darken($in-color-info, 0%) !default;
+$in-color-info600:                        darken($in-color-info, 10%) !default;
+$in-color-info700:                        darken($in-color-info, 20%) !default;
+$in-color-info800:                        darken($in-color-info, 30%) !default;

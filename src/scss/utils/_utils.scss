@@ -1,0 +1,217 @@
+/* button app */
+.in-button-app {
+    font-weight: 300;
+    font-size: 13px;
+    text-transform: capitalize;
+    color: $global-background;
+    text-align: left;
+    line-height: 17px;
+    padding: 11px 23px 13px 23px;
+    border: 2px solid rgba($color: #000000, $alpha: 0.1);
+    span.wrapper {        
+        float: right;
+        span {  
+            font-weight: $base-heading-font-weight;
+            font-size: 15px;          
+            &::before {
+                content: "\A";
+                white-space: pre;
+            }
+        }
+    }
+    i {
+        margin-right: 14px;
+        position: relative;
+        top: 4px;
+    }
+}
+
+/* brand colors */
+.brand-facebook,
+a.brand-facebook {            
+    background-color: #3B5999;
+    color: #fff;
+    &:hover {
+        background-color: lighten(#3B5999, 10%);
+    }
+}
+.brand-twitter,
+a.brand-twitter {
+    background-color: #1DA1F2;
+    color: #fff;
+    &:hover {
+        background-color: lighten(#1DA1F2, 6%);
+    }
+}
+.brand-pinterest,
+a.brand-pinterest {
+    background-color: #BD081C;
+    color: #fff;
+    &:hover {
+        background-color: lighten(#BD081C, 6%);
+    }
+}
+.brand-youtube,
+a.brand-youtube {
+    background-color: #CD201F;
+    color: #fff;
+    &:hover {
+        background-color: lighten(#CD201F, 6%);
+    }
+}
+.generic-email,
+a.generic-email {
+    background-color: #37474f;
+    color: #fff;
+    &:hover {
+        background-color: lighten(#37474f, 6%);
+    }
+}
+
+/* preloader animation keyframes */
+@keyframes preloader {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+
+/* image shadow */
+.in-img-shadow {
+    box-shadow: 20px 20px 0 0 $in-color-one;
+}
+
+/* image stretch to 100% width and height */
+.in-img-stretch {
+    width: 100%;
+    height: 100%;
+}
+
+/* offset margin */
+.in-top-offset-50 {
+    margin-top: -50px;
+}
+
+.in-top-offset-30 {
+    margin-top: -30px;
+}
+
+.in-top-offset-10 {
+    margin-top: -10px;
+}
+
+.in-top-offset-5 {
+    margin-top: -5px;
+}
+
+.in-left-offset-50 {
+    margin-left: -50px;
+}
+
+.in-left-offset-30 {
+    margin-left: -30px;
+}
+
+.in-left-offset-10 {
+    margin-left: -10px;
+}
+
+.in-left-offset-5 {
+    margin-left: -5px;
+}
+
+.in-right-offset-50 {
+    margin-right: -50px;
+}
+
+.in-right-offset-30 {
+    margin-right: -30px;
+}
+
+.in-right-offset-10 {
+    margin-right: -10px;
+}
+
+.in-right-offset-5 {
+    margin-right: -5px;
+}
+
+.in-bottom-offset-50 {
+    margin-bottom: -50px;
+}
+
+.in-bottom-offset-30 {
+    margin-bottom: -30px;
+}
+
+.in-bottom-offset-10 {
+    margin-bottom: -10px;
+}
+
+.in-bottom-offset-5 {
+    margin-bottom: -5px;
+}
+
+/* utils mediaquery */ 
+@media (max-width: 960px) {
+    .in-img-shadow {
+        width: 94%;
+        box-shadow: 20px 20px 0 0 $in-color-one;
+    }
+
+    .in-margin-remove-top\@s {
+        margin-top: 0 !important;
+    }
+    .in-margin-remove-left\@s {
+        margin-left: 0 !important;
+    }
+    .in-margin-remove-right\@s {
+        margin-right: 0 !important;
+    }
+    .in-margin-remove-bottom\@s {
+        margin-bottom: 0 !important;
+    }
+
+    .in-margin-top\@s {
+        margin-top: 30px !important;
+    }
+    .in-margin-small-top\@s {
+        margin-top: 10px !important;
+    }
+    .in-margin-medium-top\@s {
+        margin-top: 20px !important;
+    }
+    .in-margin-large-top\@s {
+        margin-top: 60px !important;
+    }
+    .in-margin-bottom\@s {
+        margin-bottom: 30px !important;
+    }
+    .in-margin-small-bottom\@s {
+        margin-bottom: 10px !important;
+    }
+    .in-margin-medium-bottom\@s {
+        margin-bottom: 20px !important;
+    }
+    .in-margin-large-bottom\@s {
+        margin-bottom: 60px !important;
+    }
+    .in-margin-negative-top\@s {
+        margin-top: -30px !important;
+    }
+    .in-margin-negative-bottom\@s {
+        margin-bottom: -30px !important;
+    }
+
+    .in-padding-horizontal\@s {
+        padding: 0 30px;
+    }
+    .in-padding-large-horizontal\@s {
+        padding: 0 60px;
+    }
+    .in-padding-vertical\@s {
+        padding: 30px 0;
+    }
+    .in-padding-large-vertical\@s {
+        padding: 60px 0;
+    }
+}

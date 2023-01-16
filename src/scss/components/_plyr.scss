@@ -1,0 +1,26 @@
+.in-video-wrapper .plyr,
+.in-audio-wrapper .plyr {
+    border-radius: $border-rounded-border-radius;
+}
+
+.in-audio-wrapper .plyr__controls {
+    background-color: #2d3436;
+}
+
+.in-audio-wrapper .plyr__controls__item:first-child,
+.in-audio-wrapper .plyr__controls__item.plyr__time,
+.in-audio-wrapper .plyr button {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.in-audio-wrapper .plyr__menu__container .plyr__control {
+    color: #4a5764;
+}
+
+.in-audio-wrapper .plyr--audio input[type=range]::-webkit-slider-runnable-track {
+    background-color: rgba(193, 201, 209, .26);
+}
+
+.in-audio-wrapper .plyr__progress__buffer {
+    color: rgba(193, 201, 209, .46);
+}

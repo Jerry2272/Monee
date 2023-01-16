@@ -1,0 +1,20 @@
+.in-signin-method {
+    .uk-heading-line {
+        margin: 28px 0 32px 0;
+        span {
+            font-size: 15px;
+        }
+    }
+    .uk-button-primary {
+        text-transform: capitalize;
+        margin-bottom: -7px;        
+        i {
+            margin-left: -2px;
+            position: relative;
+            top: 1px;
+        }
+    }
+    .uk-button-small {
+        padding: 2px 16px;
+    }    
+}

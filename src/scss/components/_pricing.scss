@@ -1,0 +1,85 @@
+.in-pricing {    
+    .uk-card {
+        overflow: hidden;
+        border-radius: 12px;
+        color: #8f8f8f;
+        border: 2px solid #f1f1f1;
+        transition: all ease 600ms;        
+    }
+    .uk-card-secondary {
+        background-color: #fff;
+    }
+    .uk-card-secondary:hover {
+        background-color: #fbfbfb;
+        border-color: #dfe6e9;
+    }
+    .uk-card-header {
+        h3 {
+            margin: 12px 0 -20px 0;
+        }
+        h4 {
+            margin-bottom: 2px;
+        }
+        .in-pricing-small {
+            margin-right: -15px;
+            font-size: 24px;
+        }
+        hr {
+            margin-top: 40px;
+            margin-bottom: -35px;
+            border-width: 1px;
+            border-color: #dfe6e9;
+        }
+        .uk-card-badge {
+            margin: 10px 8px 0 0;
+            color: #ddd;
+        }
+        i {
+            color: rgba(0,0,0,0.1);
+        }
+    }
+    .in-pricing-icons {
+        &.uk-card-default {
+            padding: 2px 23px 6px 23px;
+            border: 1px solid $in-color-one;
+            border-radius: 25px;
+        }
+    }
+    .uk-card-body {
+        .uk-list {
+            font-family: $base-heading-font-family;
+            font-size: 17px;
+            margin: 12px 0 52px 0;
+        }
+    } 
+    .in-button-stack {
+        position: relative;
+        left: 50%;
+        margin-right: -50%;
+        margin-bottom: -10px;
+        transform: translate(-50%, -50%);
+        line-height: 18px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        span {
+            font-weight: normal;
+            font-size: 13px;
+            text-transform: capitalize;
+            color: rgba($color: #fff, $alpha: 0.8);
+            &::before {
+                content: "\A";
+                white-space: pre;
+            }
+        }
+    }   
+}
+
+.in-pricing-featured {
+    .uk-card {
+        border-color: $button-default-color;
+    }
+    .uk-card-secondary:hover {
+        background-color: lighten(#468efc, 35%);
+        border-color: $button-default-color;
+    }
+}

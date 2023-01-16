@@ -1,0 +1,158 @@
+.in-colored-card {
+    .uk-card {
+        border: none;
+        box-shadow: none;
+        .uk-card-body {
+            padding: 25px 25px;
+        }
+    }
+    .in-icon-wrapper {
+        color: #fff;
+    }
+    a:hover {
+        text-decoration: none;
+    }    
+    h4 {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.20);
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        i {
+            font-size: 10px;
+            position: relative;
+            top: 8px;
+        }
+    }
+    p {
+        color: rgba(255, 255, 255, 0.8);
+        &.uk-text-small {
+            font-size: 14px;
+        }
+    }
+    &.orange {
+        .uk-card {
+            background-color: #e47d2e;
+        }
+        .in-icon-wrapper {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+    &.green {
+        .uk-card {
+            background-color: #27bc9c;
+        }
+        .in-icon-wrapper {
+            background-color: rgba(255, 255, 255, 0.28);
+        }
+    }
+    &.navy {
+        .uk-card {
+            background-color: #35495d;
+        }
+        .in-icon-wrapper {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+    &.blue {
+        .uk-card {
+            background-color: #4184dd;
+        }
+        .in-icon-wrapper {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+    &.purple {
+        .uk-card {
+            background-color: #9a5ab4;
+        }
+        .in-icon-wrapper {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+    &.grey {
+        .uk-card {
+            background-color: #95a5a6;
+        }
+        .in-icon-wrapper {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+    }
+}
+
+.in-customer-card {
+    background-color: $card-secondary-background;
+    border-radius: $border-rounded-border-radius;
+    background-size: 10%;    
+    .uk-card-header {
+        padding: 30px;
+    }
+    .uk-card-footer {
+        padding: 30px;
+    }
+    .uk-card-body {
+        padding: 20px 30px;
+    }    
+    blockquote {
+        font-size: 18px;
+        line-height: 28px;
+        color: #8f8f8f;
+    }
+    footer span {
+        font-family: $base-heading-font-family;
+        font-weight: $base-heading-font-weight;
+        font-size: 16px;
+        color: #4f4f4f;
+        letter-spacing: 0;
+    }
+    footer {
+        font-size: 13px;
+        letter-spacing: 1px;
+        line-height: 24px;
+        position: relative;
+        z-index: 1;
+    }
+    cite {
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        color: #aeaeae;
+    }
+    img {
+        &.in-customer-pic {
+            width: 200px;
+        }
+    }
+}
+
+.in-paper-card{
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 0;
+    border-color: rgba(0, 0, 0, .1);
+    &:before,
+    &:after {
+        box-shadow: 1px 1px 2px #ddd;
+        border: 1px solid rgba(0, 0, 0, .1);
+        background-color: inherit;
+        position: absolute;
+        content: "";
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+    }
+    &:before {
+        transform: rotate(1deg);
+        z-index: -1;
+        top: -1px;
+    }
+    &:after {
+        transform: rotate(-1deg);
+    z-index: -2;
+    left: -1px;
+    }
+    .uk-card-secondary {
+        .uk-card-body {
+            padding: 20px;
+        }
+    }
+}

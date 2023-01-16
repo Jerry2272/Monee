@@ -1,0 +1,35 @@
+.in-sticky {  
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,0.13);
+    .uk-section {
+        height: 70px;        
+    }
+    .in-header-subnav,
+    .in-header-button,
+    hr {
+        display: none;
+    }
+    .in-header-logo {
+        margin: -15px 0 0 16px;
+    }
+    .uk-navbar-nav > li > a {
+        position: relative;
+        top: -9px;
+        min-height: 70px;
+    }
+    .uk-navbar-dropdown {
+        margin-top: 0;
+    }
+}
+
+/* sticky mediaquery */
+@media (max-width: 960px) {
+    .in-sticky {
+        .in-mobile-nav a {
+            margin: -28px 0 0;
+        }
+        .in-header-logo {
+            margin: -15px 0 0;
+        }
+    }
+}

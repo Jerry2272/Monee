@@ -1,0 +1,92 @@
+footer {
+    .uk-container {
+        padding-bottom: 40px;
+    }    
+    hr {
+        border-width: 2px;
+    }    
+    .uk-list {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .uk-link-text a:hover {
+        color: $in-color-one;
+        text-decoration: none;
+    }
+    .in-footer-address p {
+        margin-top: -5px;
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .in-footer-copyright {
+        color: #a2a2a2;
+        p {
+            margin-top: 3px;
+        }
+    }
+    .uk-card-small .uk-card-body {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .in-footer-disclaimer {
+        margin-top: 12px;
+        font-size: 12px;
+        line-height: 22px;
+        color: #b0afaf;
+    }
+}
+
+.in-footer-info {
+    margin: 9px 0 10px;
+    .uk-subnav li,
+    .uk-subnav li a {
+        font-family: $base-heading-font-family;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: $base-link-color;
+        float: left;        
+        i {
+            font-size: 16px;
+            margin: 5px 9px 0 0;
+            color: $base-link-color;
+            float: left;
+        }            
+    }
+    .uk-subnav li {
+        span {
+            font-size: 16px;
+            color: $global-color;
+            float: left;                
+        }
+    }
+}
+.in-footer-socials {
+    margin-top: 5px;
+    span {
+        margin: 4px 30px 0 0;
+        font-family: $base-heading-font-family;
+        font-weight: normal;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    .uk-icon-button {
+        border-radius: 7px;
+        background-color: $base-link-color;
+        color: #fff;
+    }
+}
+
+/* footer mediaquery */ 
+@media (max-width: 960px) {
+    .uk-flex {
+        &.in-footer-socials {
+            margin: -20px 0 18px;
+        }
+    }
+
+    .in-footer-copyright {
+        .uk-flex {
+            margin: -10px 0 5px;
+        }
+    }
+}

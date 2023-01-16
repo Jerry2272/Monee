@@ -1,0 +1,254 @@
+.monee-custom-tile {
+    .uk-tile {
+        border-right: 2px solid #f1f1f1;
+        border-bottom: 2px solid #f1f1f1;
+    }
+    .uk-tile-default {
+        padding: 37px 5px 40px 5px;
+    }
+    .uk-tile:nth-child(3),
+    .uk-tile:last-child {
+        border-right: 0;
+    }
+    .uk-tile:nth-child(n+4) {
+        border-bottom: 0;
+    }
+    .uk-label {
+        background-color: $in-color-light200;
+        color: $in-color-dark200;
+    }
+}
+
+.monee-custom-card {
+    .uk-grid-collapse > div {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-right: 2px solid $in-color-one;
+    }
+    .uk-grid-collapse > div:nth-child(5),
+    .uk-grid-collapse > div:last-child {
+        border-right: 0;
+    }    
+    .uk-card {
+        border: 2px solid $in-color-one;
+        border-radius: 12px;        
+    }
+    .uk-card-body {            
+        padding: 16px 0 32px 0;            
+    }
+    .uk-text-small {
+        font-family: $base-heading-font-family;
+        font-size: 16px;
+        color: #012c6d;
+    }    
+}
+
+.monee-price-ticker {
+    font-family: $base-heading-font-family;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 10px 20px 8px;
+    background-color: $in-color-one;
+    color: #fff;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;    
+    .uk-label {
+        font-size: 11px;
+        margin: -2px 0 0 5px;
+        padding: 3px 9px 1px 9px;
+        border-radius: 6px;
+    }
+    .uk-label-success {
+        background-color: #2ecc71;
+    }
+    .uk-label-danger {
+        background-color: #e84118;
+    }    
+}
+
+.alt-ticker {
+    margin: -15px 0 20px;
+    padding: 0 0 23px;
+    background-color: transparent;
+    color: #575757;
+    border-bottom: 2px solid #f1f1f1;
+    border-radius: 0;
+}
+
+.monee-fee-wrapper {
+    position: relative;
+    &:before {
+        border: 1px solid $global-border;
+        border-radius: 10px;
+        position: absolute;
+        content: "";
+        right: 8%;
+        left: 8%;
+        bottom: 11px;
+        top: 15px;
+    }
+    h1 {
+        position: relative;
+        top: -45px;
+        margin-bottom: -15px;
+    }
+    h3 {
+        padding: 0 10px;
+        display: inline;
+        background-color: #fff;
+        position: relative;
+        z-index: 1;
+    }
+    .monee-currency {
+        font-size: 36px;
+    }
+    .monee-fee {
+        font-size: 92px;
+        position: relative;
+        top: 38px;
+    }
+    .uk-label {
+        font-size: 11px;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.monee-stock-info {
+    h5 {
+        color: #37474F;
+        border-top: 1px solid #e6e6e6;
+        padding-top: 5px;
+        span {
+            margin-left: 12px;
+            padding-left: 12px;
+            font-weight: normal;            
+            border-left: 2px solid #e6e6e6;
+        }
+    }
+    p {
+        font-size: 20px;
+        color: #37474F;
+    }
+    .uk-label {
+        font-family: $base-heading-font-family;
+        font-size: 11px;
+        padding: 3px 9px 1px 8px;
+        border-radius: 6px;
+    }
+}
+
+.monee-table-front {
+    th {
+        font-size: 14px;
+        background-color: $in-color-one;
+        color: #fff;
+    }
+    th:first-child {
+        border-top-left-radius: 6px;
+    }
+    th:last-child {
+        border-top-right-radius: 6px;
+    }
+    td {
+        font-size: 15.5px;
+    }
+}
+
+.monee-payment-list {
+    margin-bottom: -10px;
+    hr {
+        border-width: 1px;
+        border-color: #e3e3e3;
+    }
+}
+
+.monee-news-logo {
+    margin-top: -60px;
+    position: relative;
+    top: 2px
+}
+
+.monee-register-form {
+    hr {
+        margin: 20px 0 50px 0;
+    }
+}
+
+.monee-line-chart {
+    color: transparent;
+}
+
+.monee-button-compare {
+    font-family: $base-body-font-family;
+    font-weight: normal;
+    text-transform: initial;
+    background-color: #fff;
+    border-width: 2px;
+    border-color: #f1f1f1;
+    border-radius: 25px;
+    position: relative;
+    top: 3px;
+}
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {&.monee-button-compare {width: 134%; left: -22px;}} }
+
+/* theme custom mediaquery */
+@media (max-width: 960px) {
+    .monee-custom-tile {
+        .uk-tile:nth-child(n+1) {
+            border-right: 0;
+        }        
+        .uk-tile:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .monee-custom-card {
+        .uk-grid-collapse > div:nth-child(n+1) {
+            border-right: 0;
+            border-bottom: 2px solid $in-color-one;
+        } 
+        .uk-grid-collapse > div:nth-child(n+4) {
+            border-bottom: 0;
+        }
+    }
+
+    .monee-table-front {
+        th:nth-child(3) {
+            border-top-right-radius: 6px;
+        }
+    }
+
+    .monee-payment-list {
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 640px) and (max-width: 960px) {
+    .monee-custom-tile {
+        .uk-tile:nth-child(1),
+        .uk-tile:nth-child(3) {
+            border-right: 2px solid #f1f1f1;
+        }
+        .uk-tile:nth-child(3) {
+            border-bottom: 0;
+        }
+    }    
+
+    .monee-custom-card {
+        .uk-grid-collapse > div:nth-child(1),
+        .uk-grid-collapse > div:nth-child(3) {
+            border-right: 2px solid $in-color-one;
+        }  
+        .uk-grid-collapse > div:nth-child(3) {
+            border-bottom: 0;
+        }
+    }
+
+    .monee-table-front {
+        th:nth-child(3) {
+            border-top-right-radius: 0;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@media (max-width: 960px) {
+    .in-mobile-nav a {
+        margin: 25px 15px 25px 0;
+        i {
+            font-size: 20px;
+            position: relative;
+            top: 3.5px;
+        }
+    }
+
+    .in-mobile-nav a,
+    .uk-close-large  {
+        border: 1px solid #dadada;
+        border-radius: 5px;
+        padding: 1px 14px;
+    }
+
+    .uk-close-large {
+        font-size: 20px;
+        color: $base-body-color;
+        top: 20px;
+        right: 20px;
+        padding: 10px 16px;
+    }
+
+    .uk-modal-dialog {
+        .uk-nav-sub i {
+            margin: -2px 0 0 7px;
+        }
+        .uk-nav-primary {
+            border-bottom: 1px solid #dadada;
+            margin-bottom: 35px;
+            padding-bottom: 23px;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.in-blog-sidebar {
+    .uk-card-default,
+    .uk-card-primary {
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+    }
+    .uk-card-body {
+        padding: 26px;
+    }
+    .uk-search-input {
+        height: 46px;
+        padding-left: 20px;
+        background-color: #fff;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+    }
+    .uk-search-input::placeholder {
+        color: #c1c1c1;
+    }
+    .uk-search-icon-flip {
+        padding-right: 10px;
+    }      
+}
+
+.in-widget-category {
+    li {
+        a span {
+            background-color: #4f4f4f;
+            position: relative;
+            top: 3px;
+            transition: all ease 600ms;
+        }
+        a:hover span {
+            background-color: $in-color-one;
+        }
+    }    
+}
+
+.in-widget-popular {
+    &.uk-list-divider>li:nth-child(n+2) {
+        margin-top: 16px;
+        padding-top: 21px;
+    }
+    li {
+        img {
+            width: 68px;
+            height: 68px;
+        }
+        a {
+            position: relative;
+            top: -8px;
+        }
+        span {
+            width: 100%;
+            font-weight: $base-heading-font-weight;
+            font-size: 12px;
+            position: relative;
+            top: 7px;
+            float: left;
+        }
+        @media screen and (min--moz-device-pixel-ratio:0) {span { top: -2px; }}
+        a span {
+            color: $in-color-one;
+        }
+    }
+}
+
+.in-widget-archive {
+    li {
+        a i {
+            font-size: 10px;
+            position: relative;
+            top: 9px;
+        }        
+    }
+}
+
+.in-widget-tag {
+    .uk-label {
+        margin: 3px 0;
+        padding: 6px 12px;
+        background-color: transparent;
+        border: 1px dashed #ccc;
+        color: $base-body-color;
+        transition: all ease 600ms;
+        &:hover {
+            background-color: lighten(#468efc, 32%);
+            border-color: rgba(71, 142, 252, 0.52);
+            color: $in-color-one;
+        }
+    }    
+}
+
+.in-widget-category li a,
+.in-widget-popular li a,
+.in-widget-archive li a {
+    color: $base-body-color;
+    transition: all ease 600ms;
+}
+
+.in-widget-category li a:hover,
+.in-widget-popular li a:hover,
+.in-widget-archive li a:hover {
+    color: $in-color-one;
+    text-decoration: none;
+}

@@ -1,0 +1,466 @@
+// Base
+// ========================================================================
+@mixin hook-base-blockquote(){
+    font-family: Georgia, "Times New Roman", serif;
+    color: $in-color-black300;
+}
+@mixin hook-base-blockquote-footer(){
+    color: $in-color-black200;
+    &::before { content: "— "; }
+    cite {
+        font-family: $global-font-family;
+        font-style: normal;
+        text-transform: uppercase;
+    }
+}
+@mixin hook-base-link(){
+    &.fab,
+    &.fas {
+        color: inherit;
+    }
+    &.fab:hover,
+    &.fas:hover {
+        text-decoration: none;
+    }
+}
+
+
+// Button
+// ========================================================================
+@mixin hook-button(){
+    font-family: $button-font-family;
+    font-weight: $button-font-weight;
+    text-transform: $button-text-transform;
+    transition: 0.3s ease-in-out;
+    transition-property: color, background-color, border-color;
+}
+@mixin hook-button-default(){ border: $button-border-width solid $button-default-border; }
+@mixin hook-button-default-hover(){ border-color: $button-default-hover-border; }
+@mixin hook-button-default-active(){ border-color: $button-default-active-border; }
+@mixin hook-button-primary(){ border: $button-border-width solid transparent; }
+@mixin hook-button-secondary(){ border: $button-border-width solid transparent; }
+@mixin hook-button-danger(){ border: $button-border-width solid transparent; }
+@mixin hook-button-disabled(){ border-color: $button-disabled-border; }
+@mixin hook-button-text(){
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        border-bottom: $button-text-border-width solid $button-text-border;
+        transition: right 0.3s ease-out;
+    }
+}
+@mixin hook-button-text-hover(){
+    &::before { right: 0; }
+}
+@mixin hook-button-text-disabled(){
+    &::before { display: none; }
+}
+
+
+// Form
+// ========================================================================
+@mixin hook-form-range-thumb(){ border: $form-range-thumb-border-width solid $form-range-thumb-border; }
+@mixin hook-form-range-track(){ border-radius: $form-range-track-border-radius; }
+@mixin hook-form(){
+    border: $form-border-width solid $form-border;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: 0.2s ease-in-out;
+    transition-property: color, background-color, border;
+}
+@mixin hook-form-focus(){ border-color: $form-focus-border; }
+@mixin hook-form-disabled(){ border-color: $form-disabled-border; }
+@mixin hook-form-danger(){ border-color: $form-danger-border; }
+@mixin hook-form-success(){ border-color: $form-success-border; }
+@mixin hook-form-blank(){ border-color: transparent; }
+@mixin hook-form-blank-focus(){
+    border-color: $form-blank-focus-border;
+    border-style: $form-blank-focus-border-style;
+}
+@mixin hook-form-radio(){
+    border: $form-radio-border-width solid $form-radio-border;
+    transition: 0.2s ease-in-out;
+    transition-property: background-color, border;
+}
+@mixin hook-form-radio-focus(){ border-color: $form-radio-focus-border; }
+@mixin hook-form-radio-checked(){ border-color: $form-radio-checked-border; }
+@mixin hook-form-radio-disabled(){ border-color: $form-radio-disabled-border; }
+@mixin hook-form-label(){
+    color: $form-label-color;
+    font-size: $form-label-font-size;
+}
+@mixin hook-inverse-form(){ border-color: $inverse-global-border; }
+@mixin hook-inverse-form-focus(){ border-color: $inverse-global-color; }
+@mixin hook-inverse-form-radio(){ border-color: $inverse-global-border; }
+@mixin hook-inverse-form-radio-focus(){ border-color: $inverse-global-color; }
+@mixin hook-inverse-form-radio-checked(){ border-color: $inverse-global-color; }
+@mixin hook-inverse-form-radio-checked-focus(){}
+@mixin hook-inverse-form-label(){ color: $inverse-form-label-color; }
+@mixin hook-inverse-component-form(){
+    .uk-input,
+    .uk-select,
+    .uk-textarea {
+        background-color: $inverse-form-background;
+        color: $inverse-form-color;
+        background-clip: padding-box;
+        @if(mixin-exists(hook-inverse-form)) {@include hook-inverse-form();}
+
+        &:focus {
+            background-color: $inverse-form-focus-background;
+            color: $inverse-form-focus-color;
+            @if(mixin-exists(hook-inverse-form-focus)) {@include hook-inverse-form-focus();}
+        }
+    }
+    //
+    // Placeholder
+    //
+    .uk-input::-ms-input-placeholder { color: $inverse-form-placeholder-color !important; }
+    .uk-input::placeholder { color: $inverse-form-placeholder-color; }
+    .uk-textarea::-ms-input-placeholder { color: $inverse-form-placeholder-color !important; }
+    .uk-textarea::placeholder { color: $inverse-form-placeholder-color; }
+    //
+    // Select
+    //
+    .uk-select:not([multiple]):not([size]) { @include svg-fill($internal-form-select-image, "#000", $inverse-form-select-icon-color); }
+    //
+    // Datalist
+    //
+    .uk-input[list]:hover,
+    .uk-input[list]:focus { @include svg-fill($internal-form-datalist-image, "#000", $inverse-form-datalist-icon-color); }
+    //
+    // Radio and checkbox
+    //
+    .uk-radio,
+    .uk-checkbox {
+        background-color: $inverse-form-radio-background;
+        @if(mixin-exists(hook-inverse-form-radio)) {@include hook-inverse-form-radio();}
+    }
+    // Focus
+    .uk-radio:focus,
+    .uk-checkbox:focus {
+        @if(mixin-exists(hook-inverse-form-radio-focus)) {@include hook-inverse-form-radio-focus();}
+    }
+    // Checked
+    .uk-radio:checked,
+    .uk-checkbox:checked,
+    .uk-checkbox:indeterminate {
+        background-color: $inverse-form-radio-checked-background;
+        @if(mixin-exists(hook-inverse-form-radio-checked)) {@include hook-inverse-form-radio-checked();}
+    }
+    // Focus
+    .uk-radio:checked:focus,
+    .uk-checkbox:checked:focus,
+    .uk-checkbox:indeterminate:focus {
+        background-color: $inverse-form-radio-checked-focus-background;
+        @if(mixin-exists(hook-inverse-form-radio-checked-focus)) {@include hook-inverse-form-radio-checked-focus();}
+    }
+    // Icon
+    .uk-radio:checked { @include svg-fill($internal-form-radio-image, "#000", $inverse-form-radio-checked-icon-color); }
+    .uk-checkbox:checked { @include svg-fill($internal-form-checkbox-image, "#000", $inverse-form-radio-checked-icon-color); }
+    .uk-checkbox:indeterminate { @include svg-fill($internal-form-checkbox-indeterminate-image, "#000", $inverse-form-radio-checked-icon-color); }
+    // Label
+    .uk-form-label {
+        @if(mixin-exists(hook-inverse-form-label)) {@include hook-inverse-form-label();}
+    }
+    // Icon
+    .uk-form-icon { color: $inverse-form-icon-color; }
+    .uk-form-icon:hover { color: $inverse-form-icon-hover-color; }
+}
+
+
+// Card
+// ========================================================================
+@mixin hook-card(){ 
+    transition: box-shadow 0.1s ease-in-out; 
+    border-radius: 8px;
+}
+@mixin hook-card-default(){
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #6ea0e2;
+}
+
+
+// Subnav
+// ========================================================================
+@mixin hook-subnav-item(){
+    font-size: $subnav-item-font-size;
+    text-transform: $subnav-item-text-transform;
+    transition: 0.1s ease-in-out;
+    transition-property: color, background-color;
+}
+
+
+// Navbar
+// ========================================================================
+@mixin hook-navbar-nav-item(){
+    transition: 0.1s ease-in-out;
+    transition-property: color, background-color;
+    i {
+        font-size: 9.5px;
+        margin: 3px 0 0 6px;        
+    }
+}
+@mixin hook-navbar-nav-item-hover(){    
+    i {
+        animation: rotate 200ms linear both;
+        @keyframes rotate {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0);
+            }
+            100% {
+                -webkit-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}
+@mixin hook-navbar-dropdown(){ 
+    font-family: $base-heading-font-family;
+    box-shadow: $navbar-dropdown-box-shadow;
+    padding: 7px 22px;
+    border-radius: 8px;
+    border: 1px solid $in-color-one400;
+    .uk-navbar-dropdown-nav p:first-child {
+        margin-top: 4px;
+    }
+    .uk-navbar-dropdown-nav p {
+        line-height: 24px;
+    }
+    .uk-navbar-dropdown-nav > li > a > i {
+        position: relative;
+        top: 1px;
+        left: 7px;
+    }
+}
+@mixin hook-navbar-dropdown-nav(){
+    font-size: $navbar-dropdown-nav-font-size;
+    padding-bottom: 3px;
+}
+@mixin hook-navbar-misc(){
+    .uk-navbar-dropdown-grid > * { position: relative; }
+    .uk-navbar-dropdown-grid > :not(.uk-first-column)::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: ($navbar-dropdown-grid-gutter-horizontal / 2);
+        border-left: $global-border-width solid $in-color-one400;
+    }
+
+}
+
+
+// Article
+// ========================================================================
+@mixin hook-article-meta(){
+    a { color: $article-meta-link-color; }
+    a:hover {
+        color: $article-meta-link-hover-color;
+        text-decoration: none;
+    }
+}
+
+
+// Nav
+// ========================================================================
+@mixin hook-nav-primary-item(){
+    font-family: $base-heading-font-family;
+}
+@mixin hook-nav-misc(){
+    .uk-nav-parent-icon > .uk-parent > a::after,
+    .uk-nav-parent-icon > .uk-parent.uk-open > a::after {
+        content: "\f053";
+        background-image: none;
+        margin: 9px -9px 0 0;
+        font-size: 12px;
+        font-family: 'Font Awesome 5 Free'; 
+        font-weight: 900; 
+        color: $base-heading-color;    
+    }
+    
+    .uk-nav-parent-icon > .uk-parent.uk-open > a::after { 
+        content: "\f078";
+    }
+}
+
+
+// Label
+// ========================================================================
+@mixin hook-label(){
+    border-radius: $label-border-radius;
+    text-transform: $label-text-transform;
+    letter-spacing: 1px;
+}
+
+
+// Text
+// ========================================================================
+@mixin hook-text-lead(){
+    font-family: $base-heading-font-family;
+    font-weight: 300;
+}
+
+
+// Breadcrumb
+// ========================================================================
+@mixin hook-breadcrumb(){
+    font-family: $base-heading-font-family;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    > li {
+        font-size: $breadcrumb-item-font-size;
+    }
+    > li i {
+        display: none;
+    }
+}
+@mixin hook-breadcrumb-divider(){
+    position: relative;
+    top: -1px;
+}
+
+
+// Utility
+// ========================================================================
+@mixin hook-dropcap(){
+    font-family: Georgia, "Times New Roman", serif;
+    margin-bottom: -3px;
+    line-height: 1.1;
+    color: $in-color-grey700;
+}
+@mixin hook-box-shadow-bottom(){
+    left: 30px;
+    right: 30px;
+}
+
+
+// Pagination
+// ========================================================================
+@mixin hook-pagination-item(){
+    border: 1px solid #e5e5e5;
+    border-radius: $border-rounded-border-radius + 2;
+    padding: 6px 15px;
+    transition: color 0.2s ease-in-out;
+    i {
+        color: $pagination-item-color;
+        position: relative;
+        top: -1px;
+    }
+}
+@mixin hook-pagination-item-active(){
+    background-color: $in-color-two;
+    border-color: $in-color-two;
+}
+@mixin hook-pagination-item-hover(){
+    background-color: $in-color-light100;
+}
+
+
+// Accordion
+// ========================================================================
+@mixin hook-accordion-title(){
+    &::before {
+        position: relative;
+        top: 7px;
+        font-size: 12px;
+        font-family: 'Font Awesome 5 Free'; 
+        font-weight: 900; 
+        content: "\f053";
+        color: $accordion-title-color;
+        float: right;
+    }
+    .uk-open > &::before {
+        content: "\f078";
+    }
+}
+@mixin hook-accordion-content(){
+    font-size: 15px;
+    padding: 15px 0;
+}
+
+
+// Comment
+// ========================================================================
+@mixin hook-comment(){
+    padding-bottom: 40px;
+    border-bottom: 1px solid $global-border;
+}
+@mixin hook-comment-body(){
+    a.uk-link-muted {
+        font-weight: 800;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $in-color-one;
+    }
+}
+@mixin hook-comment-avatar(){
+    margin-top: 8px;
+}
+
+
+// Table
+// ========================================================================
+@mixin hook-table-cell(){
+    vertical-align: middle;
+}
+@mixin hook-table-header-cell(){
+    font-family: $base-heading-font-family;
+    text-transform: uppercase;
+    background-color: #eee;
+}
+@mixin hook-table-striped(){
+    border-top: $global-border-width solid $global-border;
+    border-bottom: $global-border-width solid $global-border;
+}
+
+
+// Notification
+// ========================================================================
+@mixin hook-notification-message(){
+    border-radius: $border-rounded-border-radius;
+}
+
+
+// Search 
+// ========================================================================
+@mixin hook-search-default-input(){ border: $global-border-width solid $global-border; }
+@mixin hook-search-default-input-focus(){ background-color: $global-background;}
+@mixin hook-inverse-search-default-input(){ padding-left: 50px; }
+
+
+// List
+// ========================================================================
+@mixin hook-list-bullet(){
+    background-image: none;
+    font-size: 14px;
+    font-family: 'Font Awesome 5 Free'; 
+    font-weight: 900; 
+    content: "\f00c";
+    color: $in-color-one;
+    top: 4px;
+    left: 4px;
+}
+
+
+// Modal
+// ========================================================================
+@mixin hook-modal-dialog(){
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+@mixin hook-modal-close-full(){
+    background: $global-background;
+}
+
+
+// Icon
+// ========================================================================
+@mixin hook-icon-button(){
+    transition: 0.2s ease-in-out;
+    transition-property: color, background-color;
+}

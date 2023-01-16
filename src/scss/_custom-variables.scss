@@ -1,0 +1,496 @@
+@import "_custom-colors.scss";
+
+//  Global variables
+// ========================================================================
+//
+// Typography
+//
+$global-font-family:                             'Open Sans', sans-serif !default;
+$global-font-size:                               16.5px !default;
+$global-line-height:                             1.697 !default;
+$global-xxlarge-font-size:                       2.118rem !default; 
+$global-xlarge-font-size:                        1.647rem !default;     
+$global-large-font-size:                         1.294rem !default;   
+$global-medium-font-size:                        1.059rem !default;  
+$global-small-font-size:                         0.765rem !default; 
+//
+// Colors
+//
+$global-color:                                   #8f8f8f !default;
+$global-emphasis-color:                          $in-color-two !default;
+$global-muted-color:                             #999 !default;
+$global-link-color:                              $in-color-two !default;
+$global-link-hover-color:                        $in-color-one !default;
+$global-inverse-color:                           #fff !default;
+//
+// Backgrounds
+//
+$global-background:                              #fff !default;
+$global-muted-background:                        #f6f7f8 !default;
+$global-primary-background:                      $in-color-one !default;
+$global-secondary-background:                    $in-color-light400 !default;
+$global-success-background:                      $in-color-success !default;
+$global-warning-background:                      $in-color-warning !default;
+$global-danger-background:                       $in-color-error !default;
+//
+// Borders
+//
+$global-border-width:                            1px !default;
+$global-border:                                  #e5e5e5 !default;
+//
+// Box-Shadows
+//
+$global-small-box-shadow:                        0 2px 8px rgba(0,0,0,0.08) !default;
+$global-medium-box-shadow:                       0 5px 15px rgba(0,0,0,0.08) !default;
+$global-large-box-shadow:                        0 14px 25px rgba(0,0,0,0.16) !default;
+$global-xlarge-box-shadow:                       0 28px 50px rgba(0,0,0,0.16) !default;
+//
+// Spacings
+//
+// Used in margin, section, list
+$global-margin:                                  20px !default;
+$global-small-margin:                            10px !default;
+$global-medium-margin:                           40px !default;
+$global-large-margin:                            70px !default;
+$global-xlarge-margin:                           140px !default;
+// Used in grid, column, container, align, card, padding
+$global-gutter:                                  30px !default;
+$global-small-gutter:                            15px !default;
+$global-medium-gutter:                           40px !default;
+$global-large-gutter:                            70px !default;
+
+
+//  Base
+// ========================================================================
+$base-body-background:                           $global-background !default;
+$base-body-font-family:                          $global-font-family !default;
+$base-body-font-weight:                          normal !default;
+$base-body-font-size:                            $global-font-size !default;
+$base-body-line-height:                          $global-line-height !default;
+$base-body-color:                                $global-color !default;
+$base-ins-color:                                 $base-body-color !default;
+$base-mark-color:                                $base-body-color !default;
+$base-pre-color:                                 $base-body-color !default;
+
+$base-link-color:                                $global-link-color !default;
+$base-link-text-decoration:                      none !default;
+$base-link-hover-color:                          $global-link-hover-color !default;
+$base-link-hover-text-decoration:                underline !default;
+
+$base-heading-font-family:                       'Work Sans', sans-serif !default;
+$base-heading-font-weight:                       700 !default;
+$base-heading-color:                             $global-emphasis-color !default;
+$base-heading-text-transform:                    none !default;
+$base-h1-font-size-m:                            $global-xxlarge-font-size !default;
+$base-h2-font-size-m:                            $global-xlarge-font-size !default;
+$base-h3-font-size:                              $global-large-font-size !default;
+$base-h4-font-size:                              $global-medium-font-size !default;
+$base-h5-font-size:                              0.941rem !default;
+
+$base-hr-margin-vertical:                        $global-margin !default;
+$base-hr-border-width:                           3px !default;
+$base-hr-border:                                 #f1f1f1 !default;
+
+$base-blockquote-font-size:                      1.333rem !default;
+$base-blockquote-line-height:                    2.121rem !default;
+$base-blockquote-font-style:                     italic !default;
+$base-blockquote-margin-vertical:                $global-margin !default;
+$base-blockquote-footer-margin-top:              20px !default;
+$base-blockquote-footer-margin-top:              10px !default;
+$base-blockquote-footer-font-size:               0.875rem !default;
+$base-blockquote-footer-line-height:             1.273rem !default;
+
+
+// Section
+// ========================================================================
+$section-padding-vertical:                       35px !default;
+$section-padding-vertical-m:                     35px !default;
+$section-small-padding-vertical:                 18px !default;
+$section-large-padding-vertical:                 60px !default;
+$section-large-padding-vertical-m:               60px !default;
+
+$section-default-background:                     #fff !default;
+$section-muted-background:                       #f8f8f8 !default;
+$section-primary-background:                     $in-color-info !default;
+$section-secondary-background:                   $in-color-light400 !default;
+
+
+// Container
+// ========================================================================
+$container-max-width:                            1100px !default;
+
+
+// Text
+// ========================================================================
+$text-lead-font-size:                            1.412rem !default;
+$text-lead-color:                                $base-body-color !default;
+$text-small-font-size:                           $global-small-font-size !default;
+$text-large-font-size:                           $text-lead-font-size !default;
+
+
+// Button
+// ========================================================================
+$button-line-height:                             36px !default;
+$button-small-line-height:                       25px - (1px * 2) !default;
+$button-large-line-height:                       43px - (1px * 2) !default;
+
+$button-font-family:                             $base-heading-font-family !default;
+$button-font-size:                               0.765rem !default;
+$button-font-weight:                             $base-heading-font-weight !default;
+$button-small-font-size:                         0.727rem !default;
+$button-large-font-size:                         0.765rem !default;
+
+$button-padding-horizontal:                      29px !default;
+$button-small-padding-horizontal:                13px !default;
+$button-large-padding-horizontal:                34px !default;
+
+$button-border-width:                            1px !default;
+$button-default-border:                          $in-color-one400 !default;
+$button-default-hover-border:                    $in-color-one !default;
+$button-default-active-border:                   $in-color-one !default;
+$button-disabled-border:                         $global-border !default;
+
+$button-default-background:                      #f8f8f8 !default;
+$button-default-color:                           $in-color-one !default;
+$button-default-hover-background:                lighten($button-default-color, 40%) !default;
+$button-default-hover-color:                     $in-color-one !default;
+$button-default-active-background:               darken($button-default-hover-background, 10%) !default;
+$button-default-active-color:                    $button-default-color !default;
+$inverse-button-default-color:                   $global-background !default;
+$inverse-button-default-hover-color:             $in-color-dark600 !default;
+
+$button-primary-background:                      $in-color-one400 !default;
+$button-primary-color:                           #fff !default;
+$button-primary-hover-background:                darken($button-primary-background, 9%) !default;
+$button-primary-hover-color:                     #fff !default;
+$button-primary-active-background:               darken($button-primary-background, 9%) !default;
+$button-primary-active-color:                    #fff !default;
+$inverse-button-primary-color:                   $in-color-one !default;
+$inverse-button-primary-hover-color:             $inverse-button-primary-color !default;
+
+$button-secondary-background:                    #222 !default;
+$button-secondary-color:                         #fff !default;
+$button-secondary-hover-background:              darken($button-secondary-background, 5%) !default;
+$button-secondary-hover-color:                   #fff !default;
+$button-secondary-active-background:             darken($button-secondary-background, 10%) !default;
+$button-secondary-active-color:                  #fff !default;
+
+$button-text-transform:                          uppercase !default;
+$button-text-line-height:                        1.5 !default;
+$button-text-color:                              $global-muted-color !default;
+$button-text-hover-color:                        #666 !default;
+$button-text-disabled-color:                     $global-muted-color !default;
+$button-text-border-width:                       1px !default;
+$button-text-border:                             #333 !default;
+
+$button-link-line-height:                        1.5 !default;
+$button-link-color:                              $global-primary-background !default;
+$button-link-hover-color:                        #0f6ecd !default;
+$button-link-hover-text-decoration:              underline !default;
+$button-link-disabled-color:                     $global-muted-color !default;
+
+
+// Icon button
+// ========================================================================
+$icon-link-color:                                $global-muted-color !default;
+$icon-link-hover-color:                          $global-color !default;
+$icon-link-active-color:                         darken($global-color, 5%) !default;
+
+$icon-button-size:                               36px !default;
+$icon-button-border-radius:                      500px !default;
+$icon-button-background:                         $in-color-light200 !default;
+$icon-button-color:                              $global-muted-color !default;
+
+$icon-button-hover-background:                   $in-color-one !default;
+$icon-button-hover-color:                        rgba(255, 255, 255, 0.75) !default;
+
+
+// Navbar
+// ========================================================================
+$navbar-background:                              transparent !default;
+$navbar-color-mode:                              none !default;
+
+$navbar-nav-item-height:                         80px !default;
+$navbar-nav-item-padding-horizontal:             22px !default;
+$navbar-nav-item-font-size:                      0.97rem !default;
+$navbar-nav-item-font-family:                    'Open Sans', sans-serif !default;
+$navbar-nav-item-color:                          $in-color-two !default;
+$navbar-nav-item-hover-color:                    $in-color-one !default;
+$navbar-nav-item-onclick-color:                  darken($in-color-one, 5%) !default;
+$navbar-nav-item-active-color:                   $in-color-one !default;
+
+$navbar-dropdown-width:                          200px !default;
+$navbar-dropdown-margin:                         -10px !default;
+$navbar-dropdown-padding:                        0 !default;
+$navbar-dropdown-background:                     #fff !default;
+$navbar-dropdown-color:                          $in-color-two !default;
+$navbar-dropdown-grid-gutter-horizontal:         50px !default;
+$navbar-dropdown-grid-gutter-vertical:           50px !default;
+
+$navbar-dropdown-nav-font-size:                  0.848rem !default;
+$navbar-dropdown-nav-item-color:                 $in-color-two !default;
+$navbar-dropdown-nav-item-hover-color:           $in-color-one !default;
+$navbar-dropdown-nav-item-active-color:          $in-color-one !default;
+$navbar-dropdown-nav-divider-border-width:       1px !default;
+$navbar-dropdown-nav-divider-border:             $in-color-one400 !default;
+
+$navbar-dropdown-box-shadow:                     0 10px 16px rgba(0,0,0,0.09) !default;
+
+
+// Breadcrumb
+// ========================================================================
+$breadcrumb-item-font-size:                      0.818rem !default;
+$breadcrumb-item-color:                          $base-body-color !default;
+$breadcrumb-item-hover-color:                    $base-body-color !default;
+$breadcrumb-item-hover-text-decoration:          none !default;
+$breadcrumb-item-active-color:                   $in-color-one !default;
+
+$breadcrumb-divider:                             "/" !default;
+$breadcrumb-divider-margin-horizontal:           12px !default;
+$breadcrumb-divider-font-size:                   0.606rem !default;
+$breadcrumb-divider-color:                       $base-body-color !default;
+
+
+// Dotnav
+// ========================================================================
+$dotnav-margin-horizontal:                       8px !default;
+$dotnav-margin-vertical:                         $dotnav-margin-horizontal !default;
+
+$dotnav-item-width:                              12px !default;
+$dotnav-item-height:                             $dotnav-item-width !default;
+$dotnav-item-border-radius:                      50% !default;
+
+$dotnav-item-background:                         #e8e8e8 !default;
+$dotnav-item-hover-background:                   #fff !default;
+$dotnav-item-onclick-background:                 $in-color-one !default;
+$dotnav-item-active-background:                  $in-color-one !default;
+
+
+// Card
+// ========================================================================
+$card-body-padding-horizontal:                   30px !default;
+$card-body-padding-vertical:                     30px !default;
+
+$card-badge-top:                                 30px !default;
+$card-badge-right:                               $card-badge-top !default;
+
+$card-default-background:                        #fff !default;
+$card-default-color:                             $global-color !default;
+$card-default-title-color:                       $global-emphasis-color !default;
+$card-default-hover-background:                  darken($card-default-background, 5%) !default;
+
+$card-primary-background:                        $in-color-one !default;
+$card-primary-color:                             #fff !default;
+$card-primary-title-color:                       $card-primary-color !default;
+$card-primary-hover-background:                  darken($card-primary-background, 5%) !default;
+$card-primary-color-mode:                        light !default;
+
+$card-secondary-background:                      #f6f7f8 !default;
+$card-secondary-color:                           $base-body-color !default;
+$card-secondary-title-color:                     $card-secondary-color !default;
+$card-secondary-hover-background:                darken($card-secondary-background, 5%) !default;
+$card-secondary-color-mode:                      dark !default;
+
+
+// Table
+// ========================================================================
+$table-cell-padding-vertical:                    23px !default;
+$table-cell-padding-horizontal:                  12px !default;
+
+$table-header-cell-font-size:                    12px !default;
+$table-header-cell-font-weight:                  $base-heading-font-weight !default;
+$table-header-cell-color:                        $base-heading-color !default;
+
+$table-divider-border-width:                     1px !default;
+$table-divider-border:                           $global-border !default;
+
+$table-striped-row-background:                   #fafafa !default;
+$table-hover-row-background:                     #e2e2e2 !default;
+
+
+// Form and Form Range
+// ========================================================================
+$form-range-thumb-height:                        16px !default;
+$form-range-thumb-background:                    #fff !default;
+$form-range-thumb-border-width:                  1px !default;
+$form-range-thumb-border:                        darken($global-border, 10%) !default;
+$form-range-track-border-radius:                 500px !default;
+
+$form-border-width:                              1px !default;
+$form-border:                                    $global-border !default;
+$form-focus-border:                              $global-primary-background !default;
+$form-disabled-border:                           $global-border !default;
+$form-danger-border:                             $global-danger-background !default;
+$form-success-border:                            $global-success-background !default;
+$form-blank-focus-border:                        $global-border !default;
+$form-blank-focus-border-style:                  dashed !default;
+$form-radio-border-width:                        1px !default;
+$form-radio-border:                              darken($global-border, 10%) !default;
+$form-radio-focus-border:                        $global-primary-background !default;
+$form-radio-checked-border:                      transparent !default;
+$form-radio-disabled-border:                     $global-border !default;
+$form-label-color:                               #333 !default;
+$form-label-font-size:                           0.875rem !default;
+
+$form-height:                                    38px !default;
+$form-small-height:                              30px !default;
+$form-large-height:                              55px !default;
+$form-line-height:                               $form-height - (2* $form-border-width) !default;
+$form-padding-horizontal:                        12px !default;
+$form-padding-vertical:                          4px !default;
+$form-background:                                #fff !default;
+$form-focus-background:                          #fff !default;
+$form-small-line-height:                         $form-small-height - (2* $form-border-width) !default;
+$form-large-line-height:                         $form-large-height - (2* $form-border-width) !default;
+$form-radio-background:                          transparent !default;
+$form-stacked-margin-bottom:                     5px !default;
+
+$inverse-form-label-color:                       #fff !default;
+
+// Article
+// ========================================================================
+$article-margin-top:                             70px !default;
+
+$article-title-font-size-m:                      1.939rem !default;
+$article-title-font-size:                        $article-title-font-size-m * 0.85 !default;
+$article-title-line-height:                      1.2 !default;
+
+$article-meta-font-size:                         0.788rem !default;
+$article-meta-line-height:                       1.4 !default;
+$article-meta-color:                             $global-muted-color !default;
+$article-meta-link-color:                        $global-muted-color !default;
+$article-meta-link-hover-color:                  $global-link-hover-color !default;
+
+
+// Utility
+// ========================================================================
+$border-rounded-border-radius:                   6px !default;
+
+$box-shadow-bottom-height:                       15px !default;
+$box-shadow-bottom-border-radius:                100% !default;
+$box-shadow-bottom-background:                   rgba(0, 0, 0, 0.1) !default;
+$box-shadow-bottom-blur:                         12px !default;
+
+$dropcap-margin-right:                           10px !default;
+$dropcap-font-size:                              3.2em !default;
+
+
+// Comment
+// ========================================================================
+$comment-header-margin-bottom:                   20px !default;
+
+$comment-title-font-size:                        1.25rem !default;
+$comment-title-line-height:                      1.4 !default;
+
+$comment-meta-font-size:                         0.875rem !default;
+$comment-meta-line-height:                       1.4 !default;
+$comment-meta-color:                             $global-muted-color !default;
+
+$comment-list-margin-top:                        40px !default;
+
+$comment-primary-padding:                        30px !default;
+$comment-primary-background:                     #f8f8f8 !default;
+
+
+// Pagination
+// ========================================================================
+$pagination-margin-horizontal:                   20px !default;
+
+$pagination-item-color:                          $base-body-color !default;
+$pagination-item-hover-color:                    $base-body-color !default;
+$pagination-item-hover-text-decoration:          none !default;
+$pagination-item-active-color:                   #fff !default;
+$pagination-item-disabled-color:                 $global-muted-color !default;
+
+
+// Notification
+// ========================================================================
+$notification-position:                          20px !default;
+$notification-width:                             440px !default;
+
+$notification-message-padding:                   17px !default;
+$notification-message-background:                #f8f8f8 !default;
+$notification-message-color:                     #666 !default;
+$notification-message-font-size:                 0.909rem !default;
+
+$notification-message-primary-color:             $in-color-info !default;
+$notification-message-success-color:             $in-color-success !default;
+$notification-message-warning-color:             $in-color-warning !default;
+$notification-message-danger-color:              $in-color-error !default;
+
+
+// Subnav
+// ========================================================================
+$subnav-item-font-size:                          0.727rem !default;
+$subnav-item-text-transform:                     uppercase !default;
+$subnav-item-color:                              #b5b5b5 !default;
+$subnav-divider-border:                          $global-border !default;
+
+
+// Nav (use for mobile navigation)
+// ========================================================================
+$nav-parent-icon-width:                          (1.5 * 1em) !default;
+$nav-parent-icon-height:                         $nav-parent-icon-width !default;
+$nav-parent-icon-color:                          #666 !default;
+
+$nav-primary-item-font-size:                     1.5rem !default;
+$nav-primary-item-line-height:                   1.5 !default;
+$nav-primary-item-color:                         $in-color-two !default;
+$nav-primary-item-hover-color:                   $in-color-one !default;
+$nav-primary-item-active-color:                  $in-color-one !default;
+
+$nav-primary-sublist-item-color:                 $nav-primary-item-color !default;
+$nav-primary-sublist-item-hover-color:           $nav-primary-item-hover-color !default;
+$nav-primary-sublist-item-active-color:          $nav-primary-item-active-color !default;
+
+// Modal (use for mobile navigation)
+// ========================================================================
+$modal-background:                             rgba(0,0,0,0.6) !default;
+$modal-dialog-background:                      rgba(255,255,255,0.65) !default;
+
+
+// Accordion
+// ========================================================================
+$accordion-title-font-size:                     1.25rem !default;
+$accordion-title-line-height:                   1.4 !default;
+$accordion-title-color:                         #4f4f4f !default;
+$accordion-title-hover-color:                   #666 !default;
+
+$accordion-item-margin-top:                     20px !default;
+$accordion-content-margin-top:                  20px !default;
+
+
+// Label
+// ========================================================================
+$label-padding-vertical:                         2px !default;
+$label-padding-horizontal:                       11px !default;
+$label-background:                               $in-color-one !default;
+$label-line-height:                              1.5 !default;
+$label-font-size:                                0.788rem !default;
+$label-color:                                    #fff !default;
+
+$label-border-radius:                            $border-rounded-border-radius !default;
+$label-text-transform:                           inherit !default;
+
+
+// Tooltip
+// ========================================================================
+$tooltip-max-width:                              200px !default;
+$tooltip-padding-vertical:                       4px !default;
+$tooltip-padding-horizontal:                     11px !default;
+$tooltip-background:                             rgba(0, 0, 0, 0.65) !default;
+$tooltip-border-radius:                          5px !default;
+$tooltip-color:                                  #fff !default;
+$tooltip-font-size:                              12px !default;
+$tooltip-margin:                                 5px !default;
+
+
+// Search
+// ========================================================================
+//
+// Inverse colors
+//
+$inverse-search-color:                           $global-color !default;
+$inverse-search-icon-color:                      $global-muted-color !default;
+$inverse-search-placeholder-color:               #c1c1c1 !default;
+$inverse-search-default-background:              $global-background !default;

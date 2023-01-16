@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+        url('../fonts/open-sans-v17-latin-regular.woff2') format('woff2'),
+        url('../fonts/open-sans-v17-latin-regular.woff') format('woff');
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Work Sans Light'), local('WorkSans-Light'),
+        url('../fonts/work-sans-v5-latin-300.woff2') format('woff2'),
+        url('../fonts/work-sans-v5-latin-300.woff') format('woff');
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Work Sans'), local('WorkSans-Regular'),
+        url('../fonts/work-sans-v5-latin-regular.woff2') format('woff2'),
+        url('../fonts/work-sans-v5-latin-regular.woff') format('woff');
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Work Sans Bold'), local('WorkSans-Bold'),
+        url('../fonts/work-sans-v5-latin-700.woff2') format('woff2'),
+        url('../fonts/work-sans-v5-latin-700.woff') format('woff');
+    font-display: block;
+}
+
+.in-blockquote {
+    border-left: 2px solid $global-border;
+    margin: 30px 0 30px 45px;
+    padding-left: 40px;
+}
+
+/* blockquote mediaquery */
+@media (max-width: 960px) {  
+    .in-blockquote {
+        margin: 30px 0 20px 20px;
+        padding-left: 30px;
+    }
+}

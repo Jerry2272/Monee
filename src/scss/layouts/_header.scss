@@ -1,0 +1,39 @@
+header {
+    transition: background-color ease 300ms;
+    .in-header-subnav {
+        font-size: 9px;
+        margin: 11px 0 9px;
+    }
+    .in-header-button {
+        margin-top: 7px;
+        .uk-button {
+            font-family: $base-body-font-family;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+        .uk-button-default {
+            background-color: transparent;
+            border-color: $in-color-three;
+            color: #aaa;
+            i {
+                margin-left: 5px;
+            }
+        }
+        .uk-button-primary {
+            background-color: $in-color-three;
+            border-color: $in-color-three;
+            color: $global-background;
+            text-shadow: none;
+        }
+    }
+    .in-header-logo {
+        height: 98px;
+        margin-left: 16px;    
+    }
+    .in-navbar-wrapper {
+        height: 98px;
+    }
+    .uk-navbar-container {
+        margin: 7px 0 11px 0;
+    }
+}

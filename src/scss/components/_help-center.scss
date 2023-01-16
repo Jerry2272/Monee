@@ -1,0 +1,47 @@
+.in-help-center {
+    h3 a:hover {
+        transition: all ease 0.5s;
+        text-decoration: none;
+    }
+    .in-icon-wrapper {
+        color: #dbdbdb;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+    .uk-card-default {
+        border-color: #d6dfe3;
+        box-shadow: none;
+        h4 {
+            color: #4f4f4f;
+        }
+        .in-icon-wrapper {
+            background-color: #4f4f4f;
+            color: #fff;
+        }
+    }
+    .uk-card-default:hover {
+        transition: all ease 0.8s;
+        border-color: #6ea0e2;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+        h4 {
+            transition: all ease 0.5s;
+            color: $in-color-one;
+        }
+        .in-icon-wrapper {
+            transition: all ease 0.5s;
+            background-color: #4184dd;
+        }
+    }
+    .uk-search-default {
+        .uk-search-input {
+            height: 46px;
+            border-color: #fff;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+        }
+        .uk-search-icon {
+            padding-left: 10px;
+            color: $base-body-color;
+        }
+    }
+}

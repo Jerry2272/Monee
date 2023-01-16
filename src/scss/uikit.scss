@@ -1,0 +1,12 @@
+// custom variables
+@import "_custom-variables.scss";
+
+// default variables and available mixins
+@import "../../node_modules/uikit/src/scss/variables.scss";
+@import "../../node_modules/uikit/src/scss/mixins.scss";
+
+// custom mixin
+@import "_custom-mixins.scss";
+
+// import UIkit
+@import "../../node_modules/uikit/src/scss/uikit.scss";
